@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+body {
+    /* "darknoise" background image by Mozilla */
+    background: url('/img/darknoise.png');
+    color: #222;
+    font-family: 'Fira Sans', 'Noto Sans', 'Helvetica', sans-serif;
+    padding: 0.25em 1em;
+    font-size: 11pt;
+}
+
+a {
+    animation: none;
+    color: rgb(170, 110, 70);
+    text-decoration: none;
+    transition: 500ms ease-out color;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(122, 89, 67);
+}
+
+ul.h-card {
+    display: block;
+    background-color: rgba(100%, 97.5%, 95%, 66%);
+    border: 1px solid rgba(100%, 97.5%, 95%, 40%);
+    box-shadow: 0px 0px 5px rgba(0%, 0%, 0%, 90%);
+    border-radius: 1em;
+    list-style: none;
+    padding: 1.5em 2em;
+}
+
+ul.h-card > li::before {
+    display: inline-block;
+    content: 'ツ⃝';
+    color: rgb(204, 123, 31);
+    text-shadow: 1px 1px #222a;
+    font-weight: 400;
+    margin-right: 0.5em;
+    direction: rtl;
+    transform: rotate(0deg);
+    transition: 250ms ease-out color;
+}
+
+ul.h-card > li:hover::before {
+    color: rgba(172, 131, 97, 0.8);
+}
+
+.email-placeholder {
+    color: rgb(102, 93, 85);
+    font-size: 0.5em;
+}
+
+.annt-func {
+    opacity: 90%;
+    text-shadow: 2px 2px #6664;
+}
+
+::selection {
+    color: #eed;
+    background-color: rgb(204, 123, 31);
+}
+
+a::selection {
+    color: rgb(220, 195, 150);
+}
+
+@media screen and (min-width: 500px) {
+    ul.h-card {
+        display: inline-block;
+        margin-left: 4em;
+        margin-top: 4em;
+    }
+
+    .email-placeholder {
+        font-size: inherit;
+    }
+}
